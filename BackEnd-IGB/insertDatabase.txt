@@ -1,0 +1,28 @@
+use moviesdb
+db.createCollection("moviesCollection")
+db.moviesCollection.insert([
+    {
+      title: 'Señor de los anillos: la Comunidad del Anillo', 
+      description: 'Es la primera película de la trilogía cinematográfica de El Señor de los Anillos',
+      genero: 'Aventuras',
+      imgUrl: 'https://static.pelisfox.tv/static/movie/cover/original/32a7d654271dfd002814c6303b1703c2.jpg',
+      año: '2001',
+      duración: '178 minutos'
+   },
+   {
+     title: 'Club de la pelea', 
+      description: 'Es una película satírica estadounidense de 1999 basada en la novela homónima de Chuck Palahniuk.',
+      genero: 'Acción',
+      imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ2bVTRP0vm6k3qYpXyhavCvq0_vANZHh5M2EfpnnX-kF0hwgx_Q',
+      año: '1999',
+      duración: '139 minutos'
+   },
+   {
+    title: 'Club de la pelea', 
+     description: 'Es una secuela del filme de 2014 John Wick y está protagonizada por Keanu Reeves',
+     genero: 'Acción',
+     imgUrl: 'https://static.pelisfox.tv/static/movie/cover/original/da250ff83217842c5c3d68e9eb0de84d.jpg',
+     año: '2007',
+     duración: '122 minutos'
+  }
+])
