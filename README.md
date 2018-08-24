@@ -32,7 +32,7 @@ Con la segunda instrucción si realizamos algun cambio en el código el servidor
  
 * http://localhost:8080/api/movies   -- Para crear una nueva pelicula el titulo, genero y thumbnail son obligatorios
 
-  ```
+ ```
 Example: {
 	"title" 			: "El origen",
     "description" 	: "Es una película estadounidense de ciencia ficción escrita, producida y dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio",
@@ -41,7 +41,7 @@ Example: {
     "year" 		      : "2010",
     "duration" 			: "148 minutos"
 }
-  ```
+ ```
 
  * http://localhost:8080/api/movies/:id  -- Para actualizar una pelicula le debemos enviar el id en los parametros y la información que queremos modificar en el body
  
