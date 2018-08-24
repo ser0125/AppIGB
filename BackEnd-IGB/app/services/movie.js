@@ -77,7 +77,18 @@ function updateMovie(req,res){
   
 //Este metodo borra una pelicula
 function deleteMovie(req,res){
-  
+  Movies.findByIdAndRemove({ _id: req.params.id }, (err, movie) =>
+  {
+
+     //Si se encuentra algun error imprimir por la consola
+     if (err)
+     {
+        console.dir(err);
+     }
+
+     res.json(movie);
+
+  });
   }
   module.exports = { // Exporta los metodos para el router
     getMovies: getMovies,
