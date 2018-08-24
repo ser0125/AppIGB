@@ -39,6 +39,7 @@ export class ListMoviePage {
   }
 
   ionViewDidLoad(){
+    console.log('hola');
     this.moviesService.getMovies().then(
       (data: any) =>{
         console.log(data);

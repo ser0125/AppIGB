@@ -9,9 +9,15 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let movie of movies" (click)="itemTapped($event, item)">
+      <ion-item
+      *ngFor="let movie of movies" (click)="itemTapped($event, item)" >
+      <ion-thumbnail item-start>
+          <img src="{{ movie.thumbnail }}">
+        </ion-thumbnail>
+    <h2 >
       {{movie.title}}
-    </button>
+    </h2>
+    </ion-item>
   </ion-list>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
