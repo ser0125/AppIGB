@@ -11,7 +11,7 @@ Primero debemos tener instalado MongoDB con el cual crearemos la base de datos c
 --> insertDatabase.txt
 
 
-#### Configuración backend aplicación
+#### Configuración Backend aplicación
 Lo siguiente es dirigirnos a la carpeta de BackEnd-IGB y ejecutar el siguiente comando:
 
   ```
@@ -48,3 +48,19 @@ Example: {
  * http://localhost:8080/api/movies/:id -- Para actualizar una pelicula le debemos enviar el id
  
 
+#### Configuración FrontEnd aplicación
+Lo siguiente es dirigirnos a la carpeta de Frontend-IGB y ejecutar el siguiente comando:
+
+  ```
+npm install 
+  ```
+
+Este instalara las dependencias necesarias para desplegar el proyecto, para correr el proyecto podemos ejecutar el siguiente comando
+
+   ```
+ionic serve
+  ```
+
+Para que la aplicación se muestre de forma correcta debemos correr primero los servicios de NodeJS y luego correr el ionic serve.
+
+La aplicación no quedo totalmente terminada, debio al tiempo maximo que se habia estipulado. Faltaron consumir los servicios para actualizar y crear una pelicula.
