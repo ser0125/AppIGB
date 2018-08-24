@@ -1,12 +1,10 @@
 # AppIGB
 ========================
+
 Este repositorio contiene la prueba para la empresa IGB
 
 ## Instrucciones para correr el proyecto
-=======================
-
 #### Configuración base de datos
-=======================
 
 Primero debemos tener instalado MongoDB con el cual crearemos la base de datos con las instrucciones que se encuentran en el archivo:
 
@@ -14,8 +12,6 @@ Primero debemos tener instalado MongoDB con el cual crearemos la base de datos c
 
 
 #### Configuración backend aplicación
-=======================
-
 Lo siguiente es dirigirnos a la carpeta de BackEnd-IGB y ejecutar el siguiente comando:
 
   ```
@@ -31,7 +27,6 @@ npm start --- nodemon server.js
 Con la segunda instrucción si realizamos algun cambio en el código el servidor se actualizara automaticamente.
 
 #### Endpoints de la aplicación
-=======================
 
 * http://localhost:8080//api/movies  -- Para obtener todas las peliculas
  
