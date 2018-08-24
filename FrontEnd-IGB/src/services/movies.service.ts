@@ -10,10 +10,6 @@ export class MoviesService {
         this.data = null;
     }
     getMovies(){
-        if (this.data) {
-          return Promise.resolve(this.data);
-        }
-     
         return new Promise(resolve => {
      
           this.http.get('http://localhost:8080/api/movies')
@@ -23,4 +19,10 @@ export class MoviesService {
             });
         });
       }
+
+      deleteMovie(movie : any) {
+        this.http.delete('http://localhost:8080/api/movies/' + movie._id).subscribe((res) => {
+          this.getMovies();
+      });
+   }
 }

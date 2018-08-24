@@ -4,13 +4,16 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Tus peliculas</ion-title>
+      <ion-buttons end>
+    <button ion-button block color="primary" (click)="addMovie()">Add</button>
+  </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
       <ion-item
-      *ngFor="let movie of movies" (click)="itemTapped($event, item)" >
+      *ngFor="let movie of movies" (click)="movieTapped(movie)" >
       <ion-thumbnail item-start>
           <img src="{{ movie.thumbnail }}">
         </ion-thumbnail>

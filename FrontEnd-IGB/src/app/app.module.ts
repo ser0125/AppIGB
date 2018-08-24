@@ -1,3 +1,4 @@
+import { MovieDetailPage } from './../pages/movie-detail/movie-detail';
 import { MoviesService } from './../services/movies.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListMoviePage
+    ListMoviePage,
+    MovieDetailPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListMoviePage
+    ListMoviePage,
+    MovieDetailPage
   ],
   providers: [
     StatusBar,

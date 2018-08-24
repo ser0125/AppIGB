@@ -1,3 +1,5 @@
+import { HomePage } from './../home/home';
+import { MoviesService } from './../../services/movies.service';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -13,12 +15,13 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'movie-detail.html',
 })
 export class MovieDetailPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  movie: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public moviesService: MoviesService) {
+   this.movie =	this.navParams.data.movie;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MovieDetailPage');
+  deleteMovie(){
+    this.moviesService.deleteMovie(this.movie);
+    this.navCtrl.setRoot(HomePage);
   }
-
 }
