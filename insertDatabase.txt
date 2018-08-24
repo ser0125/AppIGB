@@ -1,4 +1,4 @@
-use moviesdb
+﻿use moviesdb
 db.createCollection("moviesCollection")
 db.moviesCollection.insert([
     {
@@ -18,7 +18,7 @@ db.moviesCollection.insert([
       duration: '139 minutos'
    },
    {
-    title: 'Club de la pelea', 
+    title: 'John Wick', 
      description: 'Es una secuela del filme de 2014 John Wick y está protagonizada por Keanu Reeves',
      gender: 'Acción',
      thumbnail: 'https://static.pelisfox.tv/static/movie/cover/original/da250ff83217842c5c3d68e9eb0de84d.jpg',

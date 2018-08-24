@@ -1,3 +1,4 @@
+import { MoviesService } from './../../services/movies.service';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -9,10 +10,12 @@ export class ListMoviePage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  movies: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public moviesService: MoviesService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    this.movies = null;
 
     // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -33,5 +36,14 @@ export class ListMoviePage {
     this.navCtrl.push(ListMoviePage, {
       item: item
     });
+  }
+
+  ionViewDidLoad(){
+    this.moviesService.getMovies().then(
+      (data: any) =>{
+        console.log(data);
+        this.movies = data;
+      }
+    )
   }
 }
