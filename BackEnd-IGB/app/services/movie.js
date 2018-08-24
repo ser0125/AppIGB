@@ -39,7 +39,40 @@ res.json({ message: 'success' });
   
 //Este metodo actualiza una pelicula
 function updateMovie(req,res){
+  Movies.findById({ _id: req.params.id }, (err, movie) =>
+  {
 
+     //Si se encuentra algun error imprimir por la consola
+     if (err)
+     {
+        console.dir(err);
+     }
+     else
+     {
+       console.log(movie.title);
+
+        // Se asignan los valores a los campos respectivos
+        movie.title 			  	= req.body.title 		|| movie.title;
+        movie.description 		= req.body.description 	|| movie.description;
+        movie.gender 		      = req.body.gender 	|| movie.gender;
+        movie.thumbnail  	    = req.body.thumbnail	|| movie.thumbnail;
+        movie.year  		      = req.body.year	|| movie.year;
+        movie.duration 		    = req.body.duration 	|| movie.duration;
+
+
+        //Guarda el documento actualizado
+        movie.save((err, updatedMovie) =>
+        {
+          //Si se encuentra algun error imprimir por la consola
+           if (err)
+           {
+              res.status(500).send(err)
+           }
+           res.json(updatedMovie);
+        });
+     }
+
+  });
   }
   
 //Este metodo borra una pelicula
